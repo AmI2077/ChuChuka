@@ -1,8 +1,8 @@
 let tg = window.Telegram.WebApp; 
 tg.expand(); 
 
-tg.MainButton.textColor = "#000000";
-tg.MainButton.color = "#FAC000";
+tg.MainButton.textColor = "#ffffff";
+tg.MainButton.color = "#f66";
 
 var buttons = document.querySelectorAll('.button'); 
 var prices = document.querySelectorAll('.price').textContent;
@@ -40,6 +40,10 @@ buttons.forEach(button => {
             tg.MainButton.setText(`Общая стоимость: ${totalSum}`);
             button.textContent = '+ Добавить';
             button.style.backgroundColor = '#396';
+        }
+
+        if (totalSum == 0) { 
+            tg.MainButton.hide();     
         }
         isClicked = !isClicked;
     });
