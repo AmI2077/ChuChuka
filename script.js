@@ -25,6 +25,8 @@ buttons.forEach(button => {
             order.set(title, int_price)
             button.textContent = 'Добавлено';
             button.style.backgroundColor = '#f66';
+            button.style.color = '#fff';
+            item.style.boxShadow = '0 0px 50px rgba(0, 0, 0, 0.7)';
             totalSum = totalprice.reduce((a, b) => a + b, 0);
             //alert(`Цена товара: ${totalSum}`);
             tg.MainButton.setText(`Общая стоимость: ${totalSum}`);
@@ -40,6 +42,8 @@ buttons.forEach(button => {
             tg.MainButton.setText(`Общая стоимость: ${totalSum}`);
             button.textContent = '+ Добавить';
             button.style.backgroundColor = '#396';
+            button.style.color = '#000';
+            item.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
         }
 
         if (totalSum == 0) { 
